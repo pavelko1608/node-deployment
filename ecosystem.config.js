@@ -30,7 +30,7 @@ module.exports = {
       host : '138.68.109.169',
       ref  : 'origin/master',
       repo : 'https://github.com/pavelko1608/node-deployment.git',
-      path : '~/node-deployment',
+      path : '/home/deploy/node-production',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
     }
     
