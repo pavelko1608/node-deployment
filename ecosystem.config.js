@@ -31,7 +31,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'https://github.com/pavelko1608/node-deployment.git',
       path : '/home/deploy/node-production',
-      'post-deploy' : 'npm install && pm2 startOrRestart ecosystem.config.js --env production'
+      'post-deploy' : 'npm install && /home/deploy/.nvm/versions/node/v6.10.2/bin/pm2 startOrRestart ecosystem.config.js --env production'
     }
     
   }
