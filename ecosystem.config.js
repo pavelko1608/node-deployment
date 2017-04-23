@@ -9,10 +9,15 @@ module.exports = {
     {
       name      : 'node-deployment',
       script    : 'app.js',
+      env: {
+        COMMON_VARIABLE: 'true'
+      },
       env_production : {
         NODE_ENV: 'production'
       }
-    }
+    },
+
+   
   ],
 
   /**
@@ -26,7 +31,8 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'https://github.com/pavelko1608/node-deployment.git',
       path : '~/node-deployment',
-      'post-deploy' : 'nvm install && npm install && pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
     }
+    
   }
 };
